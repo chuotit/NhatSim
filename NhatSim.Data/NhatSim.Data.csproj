@@ -47,6 +47,10 @@
       <Project>{1b6524f9-51f8-4b76-ae1c-4cf0afc99b06}</Project>
       <Name>NhatSim.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\NhatSim.Model\NhatSim.Model.csproj">
+      <Project>{2bed0bcf-6124-46c6-94f3-bc2218860c56}</Project>
+      <Name>NhatSim.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
