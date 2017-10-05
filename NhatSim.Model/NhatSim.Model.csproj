@@ -57,9 +57,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
+    <ProjectReference Include="..\NhatSim.Common\NhatSim.Common.csproj">
+      <Project>{1b6524f9-51f8-4b76-ae1c-4cf0afc99b06}</Project>
+      <Name>NhatSim.Common</Name>
+    </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
