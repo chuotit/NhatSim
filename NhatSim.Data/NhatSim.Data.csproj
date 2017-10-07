@@ -56,6 +56,11 @@
     <Compile Include="Infrastructure\UnitOfWork.cs" />
     <Compile Include="NhatSimDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\AgentLevelRepository.cs" />
+    <Compile Include="Repositories\AgentRepository.cs" />
+    <Compile Include="Repositories\FirstNumberRepository.cs" />
+    <Compile Include="Repositories\SimNetworkRepository.cs" />
+    <Compile Include="Repositories\SimStoreRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NhatSim.Common\NhatSim.Common.csproj">
@@ -71,8 +76,6 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Repositories\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
