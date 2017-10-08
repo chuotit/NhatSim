@@ -11,6 +11,14 @@ namespace NhatSim.Data
             this.Configuration.LazyLoadingEnabled = false;
         }
 
+        public DbSet<Agent> Agents { set; get; }
+        public DbSet<AgentLevel> AgentLevels { set; get; }
+        public DbSet<FirstNumber> FirstNumbers { set; get; }
+        public DbSet<SimNetwork> SimNetworks { set; get; }
+        public DbSet<SimStore> SimStores { set; get; }
+
+        public DbSet<Error> Errors { set; get; }
+
         public static NhatSimDbContext Create()
         {
             return new NhatSimDbContext();
