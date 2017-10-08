@@ -17,6 +17,8 @@ namespace NhatSim.Data
         public DbSet<SimNetwork> SimNetworks { set; get; }
         public DbSet<SimStore> SimStores { set; get; }
 
+        public DbSet<Error> Errors { set; get; }
+
         public static NhatSimDbContext Create()
         {
             return new NhatSimDbContext();
