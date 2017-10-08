@@ -11,8 +11,8 @@ namespace NhatSim.Model.Models
         public int Id { set; get; }
 
         [Required]
-        public string AgentID { set; get; }
-        [ForeignKey("AgentID")]
+        public string AgentId { set; get; }
+        [ForeignKey("AgentId")]
         private Agent Agent { set; get; }
 
         public string Name { set; get; }
