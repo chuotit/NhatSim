@@ -11,13 +11,13 @@ namespace NhatSim.Service
 
         void Update(Agent agent);
 
-        Agent Delete(int id);
+        Agent Delete(string id);
 
         IEnumerable<Agent> GetAll();
 
         IEnumerable<Agent> GetAll(string keyword);
 
-        Agent GetById(int id);
+        Agent GetById(string id);
         
         void SaveChanges();
     }
@@ -43,7 +43,7 @@ namespace NhatSim.Service
             _agentRepository.Update(agent);
         }
 
-        public Agent Delete(int id)
+        public Agent Delete(string id)
         {
             return _agentRepository.Delete(id);
         }
@@ -62,7 +62,7 @@ namespace NhatSim.Service
 
         }
 
-        public Agent GetById(int id)
+        public Agent GetById(string id)
         {
             return _agentRepository.GetSingleById(id);
         }
