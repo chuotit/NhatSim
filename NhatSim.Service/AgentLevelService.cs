@@ -60,7 +60,7 @@ namespace NhatSim.Service
 
         public IEnumerable<AgentLevel> GetByAgentId(string id)
         {
-            return _agentLevelRepository.GetMulti(x => x.AgentID == id.ToString());
+            return _agentLevelRepository.GetMulti(x => x.AgentId == id);
         }
 
         public void SaveChanges()
