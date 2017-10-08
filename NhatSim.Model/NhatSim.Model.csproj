@@ -51,6 +51,7 @@
     <Compile Include="Abstract\IAuditable.cs" />
     <Compile Include="Models\Agent.cs" />
     <Compile Include="Models\AgentLevel.cs" />
+    <Compile Include="Models\Error.cs" />
     <Compile Include="Models\FirstNumber.cs" />
     <Compile Include="Models\SimNetwork.cs" />
     <Compile Include="Models\SimStore.cs" />
