@@ -16,11 +16,11 @@ namespace NhatSim.Service
 
         void Update(SimStore simStore);
 
-        SimStore Delete(int id);
+        SimStore Delete(string id);
 
         IEnumerable<SimStore> GetAll();
 
-        SimStore GetById(int id);
+        SimStore GetById(string id);
 
         IEnumerable<SimStore> GetByNetwork(int id);
 
@@ -50,7 +50,7 @@ namespace NhatSim.Service
             _simStoreRepository.Update(simStore);
         }
 
-        public SimStore Delete(int id)
+        public SimStore Delete(string id)
         {
             return _simStoreRepository.Delete(id);
         }
@@ -60,7 +60,7 @@ namespace NhatSim.Service
             return _simStoreRepository.GetAll(new string[] { "SimNetwork", "Agent" });
         }
 
-        public SimStore GetById(int id)
+        public SimStore GetById(string id)
         {
             return _simStoreRepository.GetSingleById(id);
         }

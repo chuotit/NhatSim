@@ -11,11 +11,11 @@ namespace NhatSim.Service
 
         void Update(FirstNumber firstNumber);
 
-        FirstNumber Delete(int id);
+        FirstNumber Delete(string id);
 
         IEnumerable<FirstNumber> GetAll();
 
-        FirstNumber GetById(int id);
+        FirstNumber GetById(string id);
 
         IEnumerable<FirstNumber> GetByNetwork(int id);
 
@@ -43,7 +43,7 @@ namespace NhatSim.Service
             _firstNumberRepository.Update(firstNumber);
         }
 
-        public FirstNumber Delete(int id)
+        public FirstNumber Delete(string id)
         {
             return _firstNumberRepository.Delete(id);
         }
@@ -53,7 +53,7 @@ namespace NhatSim.Service
             return _firstNumberRepository.GetAll(new string[] { "SimNetwork" });
         }
 
-        public FirstNumber GetById(int id)
+        public FirstNumber GetById(string id)
         {
             return _firstNumberRepository.GetSingleById(id);
         }
