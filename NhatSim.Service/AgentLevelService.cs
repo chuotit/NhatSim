@@ -15,9 +15,9 @@ namespace NhatSim.Service
 
         IEnumerable<AgentLevel> GetAll();
 
-        IEnumerable<AgentLevel> GetByAgentID(int id);
-
         AgentLevel GetById(int id);
+
+        IEnumerable<AgentLevel> GetByAgentId(string id);
 
         void SaveChanges();
     }
@@ -53,14 +53,14 @@ namespace NhatSim.Service
             return _agentLevelRepository.GetAll();
         }
 
-        public IEnumerable<AgentLevel> GetByAgentID(int id)
-        {
-            return _agentLevelRepository.GetMulti(x => x.AgentID == id.ToString());
-        }
-
         public AgentLevel GetById(int id)
         {
             return _agentLevelRepository.GetSingleById(id);
+        }
+
+        public IEnumerable<AgentLevel> GetByAgentId(string id)
+        {
+            return _agentLevelRepository.GetMulti(x => x.AgentID == id.ToString());
         }
 
         public void SaveChanges()
