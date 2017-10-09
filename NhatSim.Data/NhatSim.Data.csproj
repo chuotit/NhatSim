@@ -62,6 +62,10 @@
     <Compile Include="Migrations\201710081743531_AddErrorTable.Designer.cs">
       <DependentUpon>201710081743531_AddErrorTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710091628318_RenameAgentId.cs" />
+    <Compile Include="Migrations\201710091628318_RenameAgentId.Designer.cs">
+      <DependentUpon>201710091628318_RenameAgentId.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NhatSimDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -93,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710081743531_AddErrorTable.resx">
       <DependentUpon>201710081743531_AddErrorTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710091628318_RenameAgentId.resx">
+      <DependentUpon>201710091628318_RenameAgentId.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
