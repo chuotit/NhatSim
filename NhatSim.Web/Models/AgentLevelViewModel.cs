@@ -8,7 +8,7 @@ namespace NhatSim.Web.Models
         public int Id { set; get; }
 
         public string AgentId { set; get; }
-        [ForeignKey("AgentId")]
+
         private AgentViewModel Agent { set; get; }
 
         public string Name { set; get; }
