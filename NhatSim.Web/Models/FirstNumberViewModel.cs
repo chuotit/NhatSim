@@ -8,6 +8,7 @@ namespace NhatSim.Web.Models
         public string Id { set; get; }
 
         public int NetworkId { set; get; }
+
         public virtual SimNetworkViewModel SimNetwork { set; get; }
 
         public string FirstNumberName { set; get; }
