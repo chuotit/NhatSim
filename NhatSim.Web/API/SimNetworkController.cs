@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
@@ -30,7 +28,7 @@ namespace NhatSim.Web.API
             return CreateHttpResponse(request, () =>
             {
                 var model = _simNetworkService.GetAll();
-                
+
                 var responseData = Mapper.Map<IEnumerable<SimNetwork>, IEnumerable<SimNetworkViewModel>>(model);
                 var response = request.CreateResponse(HttpStatusCode.OK, responseData);
 

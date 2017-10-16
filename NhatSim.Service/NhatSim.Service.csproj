@@ -42,8 +42,11 @@
   <ItemGroup>
     <Compile Include="AgentLevelService.cs" />
     <Compile Include="AgentService.cs" />
+    <Compile Include="AppGroupService.cs" />
+    <Compile Include="AppRoleService.cs" />
     <Compile Include="ErrorService.cs" />
     <Compile Include="FirstNumberService.cs" />
+    <Compile Include="PermissionService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SimNetworkService.cs" />
     <Compile Include="SimStoreService.cs" />

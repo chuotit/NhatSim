@@ -55,6 +55,12 @@ namespace NhatSim.Web.Infrastructure.Extensions
             simStore.Status = simStoreViewModel.Status;
         }
 
+        public static void UpdateSimAddNew(this SimStore simStore, SimStoreAddViewModel simAddNewViewModel)
+        {
+            simStore.SimName = simAddNewViewModel.SimName;
+            simStore.Price = simAddNewViewModel.Price;
+        }
+
         public static void UpdateAgent(this Agent agent, AgentViewModel agentViewModel)
         {
             agent.Id = agentViewModel.Id;
@@ -71,6 +77,20 @@ namespace NhatSim.Web.Infrastructure.Extensions
             agent.DisplayOrder = agentViewModel.DisplayOrder;
         }
 
+        public static void UpdateRegisterAgent(this Agent agent, AgentRegisterViewModel agentRegisterViewModel)
+        {
+            agent.Id = agentRegisterViewModel.AgentId;
+            agent.Name = agentRegisterViewModel.Name;
+            agent.Hotline = agentRegisterViewModel.Hotline;
+            agent.Address = agentRegisterViewModel.Address;
+            agent.CreateDate = agentRegisterViewModel.CreateDate;
+            agent.CreateBy = agentRegisterViewModel.CreateBy;
+            agent.UpdateDate = agentRegisterViewModel.UpdateDate;
+            agent.UpdateBy = agentRegisterViewModel.UpdateBy;
+            agent.Status = agentRegisterViewModel.Status;
+            agent.DisplayOrder = agentRegisterViewModel.DisplayOrder;
+        }
+
         public static void UpdateAgentLevel(this AgentLevel agentLevel, AgentLevelViewModel agentLevelViewModel)
         {
             agentLevel.Id = agentLevelViewModel.Id;
@@ -85,6 +105,42 @@ namespace NhatSim.Web.Infrastructure.Extensions
             agentLevel.UpdateDate = agentLevelViewModel.UpdateDate;
             agentLevel.UpdateBy = agentLevelViewModel.UpdateBy;
             agentLevel.DisplayOrder = agentLevelViewModel.DisplayOrder;
+        }
+
+        public static void UpdateAppGroup(this AppGroup appGroup, AppGroupViewModel appGroupViewModel)
+        {
+            appGroup.ID = appGroupViewModel.ID;
+            appGroup.Name = appGroupViewModel.Name;
+        }
+
+        public static void UpdateAppRole(this AppRole appRole, AppRoleViewModel appRoleViewModel, string action = "add")
+        {
+            if (action == "update")
+                appRole.Id = appRoleViewModel.Id;
+            else
+                appRole.Id = Guid.NewGuid().ToString();
+            appRole.Name = appRoleViewModel.Name;
+            appRole.Description = appRoleViewModel.Description;
+        }
+
+        public static void UpdateUser(this AppUser appUser, AppUserViewModel appUserViewModel, string action = "add")
+        {
+
+            appUser.Id = appUserViewModel.Id;
+            appUser.FullName = appUserViewModel.FullName;
+            appUser.AgentId = appUserViewModel.AgentID;
+            appUser.BirthDay = appUserViewModel.BirthDay;
+            appUser.Email = appUserViewModel.Email;
+            appUser.UserName = appUserViewModel.UserName;
+            appUser.PhoneNumber = appUserViewModel.PhoneNumber;
+        }
+
+        public static void UpdateRegisterUser(this AppUser appUser, AgentRegisterViewModel agentRegisterViewModel)
+        {
+
+            appUser.UserName = agentRegisterViewModel.UserName;
+            appUser.Email = agentRegisterViewModel.Email;
+            appUser.AgentId = agentRegisterViewModel.AgentId;
         }
     }
 }
