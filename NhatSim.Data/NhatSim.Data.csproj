@@ -36,6 +36,12 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -66,13 +72,38 @@
     <Compile Include="Migrations\201710091628318_RenameAgentId.Designer.cs">
       <DependentUpon>201710091628318_RenameAgentId.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710151543227_Intergrate-AspnetIdentity.cs" />
+    <Compile Include="Migrations\201710151543227_Intergrate-AspnetIdentity.Designer.cs">
+      <DependentUpon>201710151543227_Intergrate-AspnetIdentity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710151603382_Chagekey.cs" />
+    <Compile Include="Migrations\201710151603382_Chagekey.Designer.cs">
+      <DependentUpon>201710151603382_Chagekey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710151650577_ChangeTableIdentityName.cs" />
+    <Compile Include="Migrations\201710151650577_ChangeTableIdentityName.Designer.cs">
+      <DependentUpon>201710151650577_ChangeTableIdentityName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710151656534_AddPropertiesAppTable.cs" />
+    <Compile Include="Migrations\201710151656534_AddPropertiesAppTable.Designer.cs">
+      <DependentUpon>201710151656534_AddPropertiesAppTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710151706429_AddIdentityAppTable.cs" />
+    <Compile Include="Migrations\201710151706429_AddIdentityAppTable.Designer.cs">
+      <DependentUpon>201710151706429_AddIdentityAppTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NhatSimDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\AgentLevelRepository.cs" />
     <Compile Include="Repositories\AgentRepository.cs" />
+    <Compile Include="Repositories\AppGroupRepository.cs" />
+    <Compile Include="Repositories\AppRoleGroupRepository.cs" />
+    <Compile Include="Repositories\AppRoleRepository.cs" />
+    <Compile Include="Repositories\AppUserGroupRepository.cs" />
     <Compile Include="Repositories\ErrorRepository.cs" />
     <Compile Include="Repositories\FirstNumberRepository.cs" />
+    <Compile Include="Repositories\PermissionRepository.cs" />
     <Compile Include="Repositories\SimNetworkRepository.cs" />
     <Compile Include="Repositories\SimStoreRepository.cs" />
   </ItemGroup>
@@ -100,6 +131,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710091628318_RenameAgentId.resx">
       <DependentUpon>201710091628318_RenameAgentId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710151543227_Intergrate-AspnetIdentity.resx">
+      <DependentUpon>201710151543227_Intergrate-AspnetIdentity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710151603382_Chagekey.resx">
+      <DependentUpon>201710151603382_Chagekey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710151650577_ChangeTableIdentityName.resx">
+      <DependentUpon>201710151650577_ChangeTableIdentityName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710151656534_AddPropertiesAppTable.resx">
+      <DependentUpon>201710151656534_AddPropertiesAppTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710151706429_AddIdentityAppTable.resx">
+      <DependentUpon>201710151706429_AddIdentityAppTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

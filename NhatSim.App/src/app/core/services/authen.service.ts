@@ -1,4 +1,4 @@
-﻿import { Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Http, Headers, RequestOptions, Response } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { LoggedInUser } from '../domain/loggedin.user';
@@ -44,9 +44,9 @@ export class AuthenService {
     getLoggedInUser(): LoggedInUser {
         let userInfo: LoggedInUser;
         if (this.isUserAuthenticated()) {
-            let userData = JSON.parse(localStorage.getItem(SystemConstants.CURRENT_USER));
-            userInfo = new LoggedInUser(userData.access_token, userData.userName, userData.email,
-                userData.agentID)
+          let userData = JSON.parse(localStorage.getItem(SystemConstants.CURRENT_USER));
+          userInfo = new LoggedInUser(userData.access_token, userData.fullname, userData.username, userData.email,
+            userData.agentId);
         } else {
             userInfo = null;
         }

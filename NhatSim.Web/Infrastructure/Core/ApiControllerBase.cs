@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity.Owin;
+using System;
 using System.Data.Entity.Infrastructure;
 using System.Data.Entity.Validation;
 using System.Diagnostics;
@@ -7,6 +8,7 @@ using System.Net.Http;
 using System.Web.Http;
 using NhatSim.Model.Models;
 using NhatSim.Service;
+using NhatSim.Web.App_Start;
 
 namespace NhatSim.Web.Infrastructure.Core
 {
@@ -17,6 +19,24 @@ namespace NhatSim.Web.Infrastructure.Core
         public ApiControllerBase(IErrorService errorService)
         {
             this._errorService = errorService;
+        }
+
+        //Code removed from brevity
+
+        protected ApplicationRoleManager AppRoleManager
+        {
+            get
+            {
+                return Request.GetOwinContext().GetUserManager<ApplicationRoleManager>();
+            }
+        }
+
+        protected ApplicationUserManager AppUserManager
+        {
+            get
+            {
+                return Request.GetOwinContext().GetUserManager<ApplicationUserManager>();
+            }
         }
 
         protected HttpResponseMessage CreateHttpResponse(HttpRequestMessage requestMessage, Func<HttpResponseMessage> function)
