@@ -260,3 +260,4 @@ paket-files/
 __pycache__/
 *.pyc
 /NhatSim.App/src/assets/css/style.min.css
+/NhatSim.Web/assets/oss
